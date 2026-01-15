@@ -1,0 +1,243 @@
+/**
+ * JournalStream Styles
+ * 
+ * Minimal, clean design with pastel colors and hidden scrollbars
+ * Requirements: 18.1, 18.2, 18.8, 18.9
+ */
+
+.journal-stream {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #FAFAFA; /* Off-white background */
+  padding: 2rem;
+  
+  /* Hide scrollbars while maintaining scroll functionality */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.journal-stream::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.divider-controls {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.add-divider-button {
+  background-color: #C8E6C9; /* Pastel green */
+  color: #333333;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.add-divider-button:hover {
+  background-color: #A5D6A7; /* Slightly darker green on hover */
+  transform: translateY(-1px);
+}
+
+.add-divider-button:active {
+  transform: translateY(0);
+}
+
+.notes-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.note-entry {
+  margin-bottom: 2rem;
+  transition: background-color 0.2s ease;
+}
+
+.note-entry.highlighted {
+  background-color: #FFF9C4; /* Pastel yellow for highlighted notes */
+  padding: 1rem;
+  border-radius: 8px;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.note-divider {
+  height: 1px;
+  background-color: #E0E0E0; /* Light gray */
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.note-content {
+  color: #333333; /* Dark gray text */
+}
+
+.note-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  cursor: text;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.note-title:hover {
+  background-color: rgba(200, 230, 201, 0.1);
+}
+
+.note-title-input {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 0.25rem;
+  transition: background-color 0.2s ease;
+}
+
+.note-title-input:focus {
+  background-color: rgba(200, 230, 201, 0.2); /* Subtle pastel green on focus */
+  border-radius: 4px;
+}
+
+.note-title-input::placeholder {
+  color: #999999;
+  font-style: italic;
+}
+
+.note-body {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.note-body-rendered {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333333;
+  cursor: text;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  min-height: 50px;
+}
+
+.note-body-rendered:hover {
+  background-color: rgba(200, 230, 201, 0.1);
+}
+
+.note-body-placeholder {
+  color: #999999;
+  font-style: italic;
+}
+
+.note-body-input {
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 0.25rem;
+  resize: vertical;
+  min-height: 100px;
+  transition: background-color 0.2s ease;
+}
+
+.note-body-input:focus {
+  background-color: rgba(200, 230, 201, 0.2); /* Subtle pastel green on focus */
+  border-radius: 4px;
+}
+
+.note-body-input::placeholder {
+  color: #999999;
+  font-style: italic;
+}
+
+.note-metadata {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: #666666;
+}
+
+.note-date {
+  color: #666666;
+}
+
+.note-updated {
+  color: #666666;
+  font-size: 0.875rem;
+}
+
+.note-task-badge {
+  background-color: #C8E6C9; /* Pastel green */
+  color: #333333;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.loading-indicator {
+  text-align: center;
+  padding: 1rem;
+  color: #666666;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.loading-up {
+  margin-bottom: 1rem;
+}
+
+.loading-down {
+  margin-top: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .journal-stream {
+    padding: 1rem;
+  }
+  
+  .note-title {
+    font-size: 1.25rem;
+  }
+  
+  .note-body {
+    font-size: 0.9375rem;
+  }
+}
